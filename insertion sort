@@ -1,0 +1,17 @@
+#insertion sort logic
+
+_list = [3, 4, 3, 5, 8, 6, 9, 7]
+sorted_list = []
+
+for i in _list:
+    inserted = False
+    for j in range(len(sorted_list)):
+        if i < sorted_list[j]:
+            sorted_list.insert(j, i)
+            inserted = True
+            break
+    if not inserted:
+        sorted_list.append(i)
+
+print(sorted_list)
+
